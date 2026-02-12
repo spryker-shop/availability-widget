@@ -1,0 +1,26 @@
+{% extends model('component') %}
+
+{% define config = {
+    name: 'product-availability-widget',
+} %}
+
+{% define data = {
+    status: _widget.status,
+    label: _widget.label,
+} %}
+
+{% block component %}
+    {% if data.status and _widget.isStockDisplayEnabled %}
+        {{ parent() }}
+    {% endif %}
+{% endblock %}
+
+{% block body %}
+    {% include molecule('status') with {
+        modifiers: ['availability'],
+        data: {
+            status: data.status,
+            label: data.label,
+        },
+    } only %}
+{% endblock %}

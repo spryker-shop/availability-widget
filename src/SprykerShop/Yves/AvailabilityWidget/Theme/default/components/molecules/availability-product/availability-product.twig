@@ -1,17 +1,17 @@
 {% extends model('component') %}
 
 {% define config = {
-    name: 'availability-product'
+    name: 'availability-product',
 } %}
 
 {% define data = {
     idProductConcrete: null,
-    isAvailable: false
+    isAvailable: false,
 } %}
 
 {% block component %}
-    {% if data.idProductConcrete is not empty and not data.isAvailable %}
-        {{parent()}}
+    {% if data.idProductConcrete is not null and not data.isAvailable %}
+        {{ parent() }}
     {% endif %}
 {% endblock %}
 

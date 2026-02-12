@@ -20,4 +20,14 @@
         <property name="productConcreteAvailabilities" type="ProductConcreteAvailability[]" singular="productConcreteAvailability"/>
     </transfer>
 
+    <transfer name="NumberFormatFloatRequest">
+        <property name="number" type="float"/>
+        <property name="numberFormatFilter" type="NumberFormatFilter"/>
+    </transfer>
+
+    <transfer name="NumberFormatFilter">
+        <property name="locale" type="string"/>
+        <property name="maxFractionDigits" type="int"/>
+    </transfer>
+
 </transfers>
