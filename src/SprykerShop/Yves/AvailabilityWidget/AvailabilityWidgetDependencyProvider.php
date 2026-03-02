@@ -43,11 +43,6 @@ class AvailabilityWidgetDependencyProvider extends AbstractBundleDependencyProvi
         return $container;
     }
 
-    /**
-     * @param \Spryker\Yves\Kernel\Container $container
-     *
-     * @return \Spryker\Yves\Kernel\Container
-     */
     protected function addAvailabilityStorageClient(Container $container): Container
     {
         $container->set(static::CLIENT_AVAILABILITY_STORAGE, function (Container $container) {

@@ -24,11 +24,6 @@ class AvailabilityWidgetToAvailabilityStorageClientBridge implements Availabilit
         $this->availabilityStorageClient = $availabilityStorageClient;
     }
 
-    /**
-     * @param int $idProductAbstract
-     *
-     * @return \Generated\Shared\Transfer\ProductAbstractAvailabilityTransfer|null
-     */
     public function findProductAbstractAvailability(int $idProductAbstract): ?ProductAbstractAvailabilityTransfer
     {
         return $this->availabilityStorageClient->findProductAbstractAvailability($idProductAbstract);

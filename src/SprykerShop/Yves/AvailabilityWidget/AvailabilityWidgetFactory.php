@@ -17,9 +17,6 @@ use SprykerShop\Yves\AvailabilityWidget\Mapper\ProductAvailabilityMapperInterfac
 
 class AvailabilityWidgetFactory extends AbstractFactory
 {
-    /**
-     * @return \SprykerShop\Yves\AvailabilityWidget\Mapper\ProductAvailabilityMapperInterface
-     */
     public function createProductAvailabilityMapper(): ProductAvailabilityMapperInterface
     {
         return new ProductAvailabilityMapper(
@@ -27,9 +24,6 @@ class AvailabilityWidgetFactory extends AbstractFactory
         );
     }
 
-    /**
-     * @return \SprykerShop\Yves\AvailabilityWidget\Dependency\Client\AvailabilityWidgetToAvailabilityStorageClientInterface
-     */
     public function getAvailabilityStorageClient(): AvailabilityWidgetToAvailabilityStorageClientInterface
     {
         return $this->getProvidedDependency(AvailabilityWidgetDependencyProvider::CLIENT_AVAILABILITY_STORAGE);

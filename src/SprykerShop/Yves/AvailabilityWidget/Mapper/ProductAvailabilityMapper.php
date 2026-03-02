@@ -25,9 +25,6 @@ class ProductAvailabilityMapper implements ProductAvailabilityMapperInterface
      */
     protected AvailabilityWidgetToAvailabilityStorageClientInterface $availabilityStorageClient;
 
-    /**
-     * @param \SprykerShop\Yves\AvailabilityWidget\Dependency\Client\AvailabilityWidgetToAvailabilityStorageClientInterface $availabilityStorageClient
-     */
     public function __construct(AvailabilityWidgetToAvailabilityStorageClientInterface $availabilityStorageClient)
     {
         $this->availabilityStorageClient = $availabilityStorageClient;
@@ -46,11 +43,6 @@ class ProductAvailabilityMapper implements ProductAvailabilityMapperInterface
         return $attributes;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ItemTransfer $itemTransfer
-     *
-     * @return bool
-     */
     protected function isItemAvailable(ItemTransfer $itemTransfer): bool
     {
         $productAbstractAvailabilityTransfer = $this->availabilityStorageClient
@@ -69,12 +61,6 @@ class ProductAvailabilityMapper implements ProductAvailabilityMapperInterface
         return false;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ProductConcreteAvailabilityTransfer $productConcreteAvailabilityTransfer
-     * @param \Generated\Shared\Transfer\ItemTransfer $itemTransfer
-     *
-     * @return bool
-     */
     protected function checkItemAvailability(
         ProductConcreteAvailabilityTransfer $productConcreteAvailabilityTransfer,
         ItemTransfer $itemTransfer
