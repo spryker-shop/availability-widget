@@ -1,0 +1,14 @@
+Catalog,Catalog
+"Catalog-related configuration.","Catalog-related configuration."
+Inventory,Inventory
+"Inventory-related configuration.","Inventory-related configuration."
+"Stock Options","Stock Options"
+"Controls how product stock is displayed to customers.","Controls how product stock is displayed to customers."
+"Display Stock Availability","Display Stock Availability"
+"When enabled, stock availability information is shown to customers on product pages and in the cart.","When enabled, stock availability information is shown to customers on product pages and in the cart."
+"Stock Info Options","Stock Info Options"
+"Choose how stock availability is presented to customers.","Choose how stock availability is presented to customers."
+"Display Indicator only","Display Indicator only"
+"Displays if a concrete product is Available or Out of stock.","Displays if a concrete product is Available or Out of stock."
+"Display Indicator & stock amount","Display Indicator & stock amount"
+"Displays the stock quantity alongside the indicator, e.g. '100 in stock'. When stock is zero, displays '0 in stock'.","Displays the stock quantity alongside the indicator, e.g. '100 in stock'. When stock is zero, displays '0 in stock'."

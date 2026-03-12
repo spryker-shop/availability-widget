@@ -1,0 +1,60 @@
+# yaml-language-server: $schema=../../../../Spryker/Configuration/resources/configuration/configuration-schema-v1.json
+features:
+    - key: catalog
+      name: Catalog
+      description: Catalog-related configuration.
+      enabled: true
+      order: 0
+      tabs:
+          - key: inventory
+            name: Inventory
+            description: Inventory-related configuration.
+            enabled: true
+            order: 0
+            groups:
+                - key: stock_options
+                  name: Stock Options
+                  description: Controls how product stock is displayed to customers.
+                  enabled: true
+                  order: 0
+                  scopes:
+                      - global
+                      - store
+                  settings:
+                      - key: display_stock_availability
+                        name: Display Stock Availability
+                        description: When enabled, stock availability information is shown to customers on product pages and in the cart.
+                        type: boolean
+                        default_value: 'false'
+                        enabled: true
+                        secret: false
+                        storefront: true
+                        scopes:
+                            - global
+                            - store
+
+                      - key: stock_info_options
+                        name: Stock Info Options
+                        description: Choose how stock availability is presented to customers.
+                        type: radio
+                        default_value: indicator_and_quantity
+                        enabled: true
+                        secret: false
+                        storefront: true
+                        order: 1
+                        scopes:
+                            - global
+                            - store
+                        options:
+                            - value: indicator_only
+                              label: 'Display Indicator only'
+                              description: 'Displays if a concrete product is Available or Out of stock.'
+                            - value: indicator_and_quantity
+                              label: 'Display Indicator & stock amount'
+                              description: "Displays the stock quantity alongside the indicator, e.g. '100 in stock'. When stock is zero, displays '0 in stock'."
+                        dependencies:
+                            - when:
+                                  any:
+                                      - setting: catalog:inventory:stock_options:display_stock_availability
+                                        operator: equals
+                                        value: 'true'

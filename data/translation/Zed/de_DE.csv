@@ -1,0 +1,14 @@
+Catalog,Katalog
+"Catalog-related configuration.","Katalogbezogene Konfiguration."
+Inventory,Inventar
+"Inventory-related configuration.","Inventarbezogene Konfiguration."
+"Stock Options",Bestandsoptionen
+"Controls how product stock is displayed to customers.","Steuert, wie der Produktbestand den Kunden angezeigt wird."
+"Display Stock Availability","Bestandsverfügbarkeit anzeigen"
+"When enabled, stock availability information is shown to customers on product pages and in the cart.","Wenn aktiviert, wird die Verfügbarkeitsinformation des Bestands den Kunden auf Produktseiten und im Warenkorb angezeigt."
+"Stock Info Options",Bestandsinfo-Optionen
+"Choose how stock availability is presented to customers.","Wählen Sie, wie die Verfügbarkeit des Bestands den Kunden präsentiert wird."
+"Display Indicator only","Nur Indikator anzeigen"
+"Displays if a concrete product is Available or Out of stock.","Zeigt an, ob ein konkretes Produkt verfügbar oder nicht auf Lager ist."
+"Display Indicator & stock amount","Indikator & Bestandsmenge anzeigen"
+"Displays the stock quantity alongside the indicator, e.g. '100 in stock'. When stock is zero, displays '0 in stock'.","Zeigt die Bestandsmenge neben dem Indikator an, z.B. '100 auf Lager'. Wenn der Bestand null ist, wird '0 auf Lager' angezeigt."

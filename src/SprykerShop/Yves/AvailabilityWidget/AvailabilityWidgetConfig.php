@@ -19,6 +19,10 @@ class AvailabilityWidgetConfig extends AbstractBundleConfig
 
     public const string STOCK_DISPLAY_MODE_INDICATOR_AND_QUANTITY = 'indicator_and_quantity';
 
+    protected const string CONFIGURATION_KEY_CATALOG_INVENTORY_STOCK_OPTIONS_DISPLAY_STOCK_AVAILABILITY = 'catalog:inventory:stock_options:display_stock_availability';
+
+    protected const string CONFIGURATION_KEY_CATALOG_INVENTORY_STOCK_OPTIONS_STOCK_INFO_OPTIONS = 'catalog:inventory:stock_options:stock_info_options';
+
     /**
      * Specification:
      * - Returns true if the stock display widget is enabled.
@@ -27,7 +31,7 @@ class AvailabilityWidgetConfig extends AbstractBundleConfig
      */
     public function isStockDisplayEnabled(): bool
     {
-        return static::STOCK_DISPLAY_ENABLED;
+        return $this->getModuleConfig(static::CONFIGURATION_KEY_CATALOG_INVENTORY_STOCK_OPTIONS_DISPLAY_STOCK_AVAILABILITY, static::STOCK_DISPLAY_ENABLED);
     }
 
     /**
@@ -40,7 +44,7 @@ class AvailabilityWidgetConfig extends AbstractBundleConfig
      */
     public function getStockDisplayMode(): string
     {
-        return static::STOCK_DISPLAY_MODE_INDICATOR_AND_QUANTITY;
+        return $this->getModuleConfig(static::CONFIGURATION_KEY_CATALOG_INVENTORY_STOCK_OPTIONS_STOCK_INFO_OPTIONS, static::STOCK_DISPLAY_MODE_INDICATOR_AND_QUANTITY);
     }
 
     /**
