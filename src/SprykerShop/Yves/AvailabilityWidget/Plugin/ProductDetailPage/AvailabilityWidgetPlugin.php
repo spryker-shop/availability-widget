@@ -16,16 +16,31 @@ use SprykerShop\Yves\ProductDetailPage\Dependency\Plugin\AvailabilityWidget\Avai
  */
 class AvailabilityWidgetPlugin extends AbstractWidgetPlugin implements AvailabilityWidgetPluginInterface
 {
+    /**
+     * {@inheritDoc}
+     *
+     * @api
+     */
     public function initialize(ProductViewTransfer $productViewTransfer): void
     {
         $this->addParameter('product', $productViewTransfer);
     }
 
+    /**
+     * {@inheritDoc}
+     *
+     * @api
+     */
     public static function getName(): string
     {
         return static::NAME;
     }
 
+    /**
+     * {@inheritDoc}
+     *
+     * @api
+     */
     public static function getTemplate(): string
     {
         return '@AvailabilityWidget/views/availability/availability.twig';
